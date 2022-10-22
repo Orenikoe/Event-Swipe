@@ -6,10 +6,10 @@ const EventsDisplay = (props) => {
 
 	return (
 		<>
-			{props.data && (
-				<h1>
-					{props.data[0].type} Events
-				</h1>
+			{window.location.pathname === '/' ? (
+				<h1>All Events</h1>
+			) : (
+				<h1>{props.data[0].type} Events</h1>
 			)}
 
 			{/* <div className="cards-container">
@@ -20,11 +20,13 @@ const EventsDisplay = (props) => {
 			</div> */}
 			<div className="cards-container">
 				{props.data &&
-					props.data.filter((item) => {
-                        return item.title.toLocaleLowerCase().includes(props.filter)
-                    }).map((item) => {
-						return <EventCard data={item} />;
-					})}
+					props.data
+						.filter((item) => {
+							return item.title.toLocaleLowerCase().includes(props.filter);
+						})
+						.map((item) => {
+							return <EventCard data={item} />;
+						})}
 			</div>
 		</>
 	);

@@ -47,6 +47,7 @@ setSearchValue(input);
 				<Route path="/music" element={<EventsDisplay data={musicEvents} filter={searchValue} />} />
 				<Route path="/sports" element={<EventsDisplay data={sportEvents} filter={searchValue} />} />
 				<Route path="/theatre" element={<EventsDisplay data={theatreEvents} filter={searchValue} />} />
+				<Route path="/" element={<EventsDisplay data={events} filter={searchValue} />} />
 				
 			</Routes>
     </main>

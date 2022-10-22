@@ -4,3 +4,8 @@ nav {
     background-color: grey;
     justify-content: space-around;;
 }
+
+.company-logo {
+    height: 100%;
+    width: 100%;
+}
