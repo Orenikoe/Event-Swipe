@@ -1,0 +1,14 @@
+.form-backfround-layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
+}
+
+.form-backfround-layout img {
+    width: 50%;
+    margin: auto;
+}
+.form-backfround-layout div {
+    width: 100%;
+    height: 20vh;
+}

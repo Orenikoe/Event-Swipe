@@ -1,15 +1,22 @@
 import React from 'react'
 import Form from '../Form/Form'
+import FormBackground from '../Backgrounds/FormBackground/FormBackground'
 import { loginFormFields } from '../../data/app-data'
+import { BackgroundPages } from '../../data/app-data'
 
 
 const Login = () => {
-    console.log(loginFormFields);
+    const [page] = BackgroundPages.filter(page => {
+      return page.title === 'Login'
+    })
+    
+   
 
   return (
     <>
-    <h1>Login Page</h1>
-    <Form data={loginFormFields} condition={loginFormFields}/>
+    <FormBackground data={page}>
+    </FormBackground>
+    <Form data={loginFormFields}/>
     </>
    
     
