@@ -7,7 +7,7 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <nav>
-        <img src='/images/company-logo.png' alt='company-logo'></img>
+       <Link to='/'> <img className='company-logo' src='/images/company-logo.png' alt='company-logo'></img></Link>
         {NavbarLinks.map((navElement) => {
             return  <Link to={navElement.toLocation}><NavButton data={navElement}/></Link>
        
