@@ -1,11 +1,17 @@
 import React from 'react';
 import { subscribeFormFields } from '../../data/app-data';
+import { BackgroundPages } from '../../data/app-data';
+import FormBackground from '../Backgrounds/FormBackground/FormBackground';
 import Form from '../Form/Form';
 
 const Subscribe = () => {
+    const [page] = BackgroundPages.filter(page => {
+        return page.title === 'Subscribe'
+      })
+
 		return (
             <>
-            <h1>Subscribe</h1>
+            <FormBackground data={page}/>
             <Form data={subscribeFormFields} />
             </>
 
