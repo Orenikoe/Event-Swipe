@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import React, { useState } from 'react';
+import React from 'react';
 import './SearchBar.css';
 
 export default function SearchBar(props) {
