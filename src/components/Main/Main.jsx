@@ -2,6 +2,7 @@ import React , {useEffect,useState} from 'react'
 import { Routes, Route } from 'react-router-dom';
 import EventsDisplay from '../EventsDisplay/EventsDisplay';
 import Login from '../Login/Login';
+import SearchBar from '../SearchBar/SearchBar';
 
 
 const Main = () => {
@@ -9,6 +10,8 @@ const Main = () => {
     const [musicEvents, setMusicEvents] = useState(null);
     const [sportEvents, setSportEvents] = useState(null);
     const [theatreEvents, setTheatreEvents] = useState(null);
+	const [searchValue, setSearchValue] = useState('');
+
 
 	useEffect(() => {
 		fetch('https://api.seatgeek.com/2/events?client_id=Mjk4MjkxNzJ8MTY2NjI1NjIzNi41ODYyMTUz')
@@ -27,6 +30,9 @@ const Main = () => {
 			});
 	}, []);
 	
+    function handleChange(input) {
+setSearchValue(input);
+    }
 		
 
 
@@ -34,11 +40,13 @@ const Main = () => {
 
   return (
     <main>
+        <SearchBar state={handleChange}/>
         <Routes>
+          
 				<Route path="/login" element={<Login />} />
-				<Route path="/music" element={<EventsDisplay data={musicEvents} />} />
-				<Route path="/sports" element={<EventsDisplay data={sportEvents} />} />
-				<Route path="/theatre" element={<EventsDisplay data={theatreEvents} />} />
+				<Route path="/music" element={<EventsDisplay data={musicEvents} filter={searchValue} />} />
+				<Route path="/sports" element={<EventsDisplay data={sportEvents} filter={searchValue} />} />
+				<Route path="/theatre" element={<EventsDisplay data={theatreEvents} filter={searchValue} />} />
 				
 			</Routes>
     </main>

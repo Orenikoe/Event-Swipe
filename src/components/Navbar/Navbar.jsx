@@ -1,4 +1,4 @@
-import Button from '../Button/Button'
+import NavButton from '../Button/Button'
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { NavbarLinks } from '../../data/app-data'
@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav>
         <img src='/images/company-logo.png' alt='company-logo'></img>
         {NavbarLinks.map((navElement) => {
-            return  <Link to={navElement.toLocation}><Button data={navElement}/></Link>
+            return  <Link to={navElement.toLocation}><NavButton data={navElement}/></Link>
        
 
         })}
