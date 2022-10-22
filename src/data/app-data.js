@@ -70,3 +70,35 @@ export const BackgroundPages = [
 },
     
 ]
+
+// ============================================================================================
+//                                      Data for Buttons
+// ==============================================================================================
+
+export const NavbarLinks = [
+    {
+        title: 'Sports',
+        isSelected: null,
+        toLocation: '/sports'
+    },
+    {
+        title: 'Theatre',
+        isSelected: null,
+        toLocation: '/theatre'
+
+    },
+    {
+        title: 'Music',
+        isSelected: null,
+        toLocation: '/music'
+
+
+    },
+    {
+        title: 'Login',
+        isSelected: null,
+        toLocation: '/login'
+
+
+    }
+]
