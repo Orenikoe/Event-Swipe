@@ -15,7 +15,7 @@ props.data.liked = isLiked;
               <span className="letter">Location: {props.data.venue.display_location} </span>
             </div>
             <div className="card-title-group">
-              <h5 className="card-title">{props.data.performers[0].name}</h5>
+              <h5 className="card-title">{props.data.title}</h5>
               <div className="card-date">{props.data.datetime_local}</div>
             </div>
           </div>

@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav>
        <Link to='/'> <img className='company-logo' src='/images/company-logo.png' alt='company-logo'></img></Link>
         {NavbarLinks.map((navElement) => {
-            return  <Link to={navElement.toLocation}><NavButton data={navElement}/></Link>
+            return  <Link key={navElement.toLocation} to={navElement.toLocation}><NavButton data={navElement}/></Link>
        
 
         })}

@@ -15,8 +15,7 @@ const Login = () => {
 
   return (
     <>
-    <FormBackground data={page}>
-    </FormBackground>
+    <FormBackground data={page}/>
     <Form data={loginFormFields}/>
     </>
    

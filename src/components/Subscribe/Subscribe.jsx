@@ -11,10 +11,10 @@ const Subscribe = () => {
 
 		return (
             <>
-            <FormBackground data={page}>
+            <FormBackground data={page}/>
 
             <Form data={subscribeFormFields} />
-            </FormBackground>
+        
             </>
 
         )
