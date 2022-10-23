@@ -33,11 +33,13 @@ const Main = () => {
     function handleChange(input) {
 setSearchValue(input);
     }
+
+   
 		
 
 
 
-
+ 
   return (
     <main>
         <SearchBar state={handleChange}/>

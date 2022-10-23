@@ -6,6 +6,7 @@ import { BackgroundPages } from '../../data/app-data'
 
 
 const Login = () => {
+
     const [page] = BackgroundPages.filter(page => {
       return page.title === 'Login'
     })

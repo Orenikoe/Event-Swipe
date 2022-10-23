@@ -5,6 +5,7 @@ import { NavbarLinks } from '../../data/app-data'
 import './Navbar.css'
 
 const Navbar = () => {
+    
   return (
     <nav>
        <Link to='/'> <img className='company-logo' src='/images/company-logo.png' alt='company-logo'></img></Link>
