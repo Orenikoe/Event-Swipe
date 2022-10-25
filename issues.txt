@@ -1,0 +1,4 @@
+Issues:
+
+1. fix the dates of rest of the week events at main - there is a problem towards the end of the month when 7 days are added to 25 it
+shows 32 which is not a valid day.

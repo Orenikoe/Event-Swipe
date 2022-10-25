@@ -1,5 +1,6 @@
 import EventCard from '../EventCard/EventCard';
 import './EventsDisplay.css';
+import FilteringBar from '../FilteringBar/FilteringBar';
 
 const EventsDisplay = (props) => {
 	console.log(props.data);
@@ -10,7 +11,7 @@ const EventsDisplay = (props) => {
 				{props.title + ' '}
 				Events
 			</h1>
-
+				<FilteringBar/>
 			<div className="cards-container">
 				{props.data &&
 					props.data
@@ -18,7 +19,7 @@ const EventsDisplay = (props) => {
 							return item.title.toLocaleLowerCase().includes(props.filter);
 						})
 						.map((item) => {
-							return <EventCard data={item} />;
+							return <EventCard key={item.id} data={item} />;
 						})}
 			</div>
 		</div>

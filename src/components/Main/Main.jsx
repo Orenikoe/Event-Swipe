@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import EventsDisplay from '../EventsDisplay/EventsDisplay';
 import Login from '../Login/Login';
-import  { SignIn } from '../Login/Login2';
+// import  { SignIn } from '../Login/Login2';
 import SearchBar from '../SearchBar/SearchBar';
 
 const Main = () => {
@@ -50,6 +50,7 @@ const Main = () => {
 	}, []);
 
 	useEffect(() => {
+		// ---------------------------------------------------------------issue No. 1
         let year = new Date().getFullYear();
         let month = (new Date().getMonth()+1);
         let day = new Date().getDate();
@@ -58,7 +59,7 @@ const Main = () => {
 				month
 			}-${
 				day + 1
-			}&datetime_utc.lte=${year}-${month}-${day+7}&per_page=200&client_id=Mjk4MjkxNzJ8MTY2NjI1NjIzNi41ODYyMTUz`
+			}&datetime_utc.lte=${year}-${month}-${31}&per_page=200&client_id=Mjk4MjkxNzJ8MTY2NjI1NjIzNi41ODYyMTUz`
 		)
         .then((res) => res.json())
         .then(data => setRestWeekEvents(data.events))
@@ -72,7 +73,7 @@ const Main = () => {
 		<main>
 			<SearchBar state={handleChange} />
 			<Routes>
-				<Route path="/login" element={< SignIn />} />
+				<Route path="/login" element={< Login />} />
 				<Route
 					path="/music"
 					element={<EventsDisplay data={musicEvents} title='Music' filter={searchValue} />}

@@ -40,7 +40,7 @@ export const BackgroundPages = [
 ];
 
 // ============================================================================================
-//                                      Data for Buttons
+//                                      Data for Navbar Buttons
 // ==============================================================================================
 
 export const NavbarLinks = [
@@ -69,4 +69,22 @@ export const NavbarLinks = [
 		isSelected: null,
 		toLocation: '/login',
 	},
+];
+
+
+// ============================================================================================
+//                                      Data for Event Filtering Buttons
+// ==============================================================================================
+
+export const FilteringOptions = [
+	{
+		title: 'Sort By',
+		options: ['Cheapest first', 'Popular first'],
+		
+	},
+	{
+		title: 'Filter',
+		options: ['Tickets Available', 'Less than 50 Km from me', 'Less than $10', 'Less than $20', 'Less than $50', 'Less than $100'],
+	}
+	
 ];
